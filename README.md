@@ -76,8 +76,8 @@ Connect to any mongos instance and execute:
 5. Uncomment the section about **mongocfg2-rs** and **mongocfg3-rs** in docker-compose file, start them with `docker-compose start mongocfg2-rs mongocfg3-rs`
 6. Add them to replicaset (on **mongocfg1**):
 
-        cfg-rs:PRIMARY> rs.add( { host: "mongocfg2-rs:27018", priority: 0, votes: 0 } )
-        cfg-rs:PRIMARY> rs.add( { host: "mongocfg3-rs:27018", priority: 0, votes: 0 } )
+        cfg-rs:PRIMARY> rs.add( { host: "mongocfg2-rs:27017", priority: 0, votes: 0 } )
+        cfg-rs:PRIMARY> rs.add( { host: "mongocfg3-rs:27017", priority: 0, votes: 0 } )
 
 7. Give the new members votes and priority:
 
